@@ -27,27 +27,27 @@
           </div>
         </div>
       </nav>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">EMPCODE</th>
+            <th scope="col">EMPNAME</th>
+            <th scope="col">DESIGNATION</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+          <tr>
+            <td>{{i.EmployeeCode}}</td>
+            <td>{{i.EmployeeName}}</td>
+            <td>{{i.EmployeeDesignation}}</td>
+          </tr>
+          
+          {% endfor %}
+        </tbody>
+      </table>
+    
 
-    <form action="/read" method="post">
-        <table class="table">
-            <tr>
-                <td>EMPCODE</td>
-                <td><input name="ecode" type="text" class="form-control"></td>
-            </tr>
-            <tr>
-                <td>EMPNAME</td>
-                <td><input name="ename" type="text" class="form-control"></td>
-            </tr>
-            <tr>
-                <td>DESIGNATION</td>
-                <td><input name="edesig" type="text" class="form-control"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button class="btn btn-primary">SUBMIT</button></td>
-            </tr>
-        </table>
-    </form>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
